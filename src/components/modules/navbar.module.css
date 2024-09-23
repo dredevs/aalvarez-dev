@@ -40,7 +40,7 @@
     right: 0;
     bottom: 0;
     height: 0; 
-    background-color: lightgray;
+    background-color: lightgray ;
     transition: height 0.3s ease; 
     z-index: -1;
 }
@@ -57,9 +57,18 @@
 .iconContainer a {
     margin-left: 20px; 
     font-size: 24px;
-    color: black; 
+    color: darkgrey; 
 }
 
 .iconContainer a:first-child {
     margin-left: 0; 
+}
+
+
+.iconContainer a {
+    transition: transform 0.3s ease; 
+}
+
+.iconContainer a:hover {
+    transform: scale(1.2); 
 }

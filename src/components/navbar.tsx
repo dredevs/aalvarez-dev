@@ -22,7 +22,7 @@
                         <a href="https://github.com/dredev" target="_blank" rel="noopener noreferrer">
                             <FaGithub className="text-xl hover:text-gray-700 mx-3" />
                         </a>
-                        <a href="https://twitter.com/dredev_" target="_blank" rel="noopener noreferrer">
+                        <a href="https://twitter.com/dredevs_" target="_blank" rel="noopener noreferrer">
                             <FaTwitter className="text-xl hover:text-blue-400" />
                         </a>
                         <a href="mailto:contact.dredev@gmail.com">
