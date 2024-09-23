@@ -1,0 +1,62 @@
+.container {
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: -5px;
+}
+
+.projectsTitle {
+    font-size: 1.5rem;
+}
+
+.viewMore {
+    color: #007ACC;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.viewMore:hover {
+    text-decoration: underline;
+}
+
+.repoList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.repoItem {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+    max-width: 600px;
+    width: 250%;
+}
+
+.repoItem:hover {
+    background-color: #f5f5f5;
+}
+
+.repoItem h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.repoItem p {
+    margin: 5px 0 0;
+    color: #555;
+}

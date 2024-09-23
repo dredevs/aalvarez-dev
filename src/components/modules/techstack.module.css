@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.title {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.07rem; 
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.techBorder {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 1px;
+    width: fit-content;
+}
+
+.techList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.techItem {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+}
+
+.tooltip {
+    visibility: hidden;
+    width: 80px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 3px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.techItem:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.react-icon { color: #61DAFB; }
+.next-icon { color: #000000; }
+.tailwind-icon { color: #38B2AC; }
+.typescript-icon { color: #007ACC; }
+.javascript-icon { color: #F7DF1E; }
+.html-icon { color: #E44D26; }
+.css-icon { color: #1572B6; }
+.git-icon { color: #F15029; }
+.github-icon { color: #181717; }
+.python-icon { color: #3776AB; }
+.vscode-icon { color: #007ACC; }
+.intellij-icon { color: #A81C30; }
+.clion-icon { color: #4E6E6D; }
