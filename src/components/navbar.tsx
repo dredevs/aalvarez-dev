@@ -19,7 +19,7 @@
                         <a href="https://www.linkedin.com/in/aalvarezm" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin className="text-xl hover:text-blue-700" />
                         </a>
-                        <a href="https://github.com/dredev" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/dredevs" target="_blank" rel="noopener noreferrer">
                             <FaGithub className="text-xl hover:text-gray-700 mx-3" />
                         </a>
                         <a href="https://twitter.com/dredevs_" target="_blank" rel="noopener noreferrer">
