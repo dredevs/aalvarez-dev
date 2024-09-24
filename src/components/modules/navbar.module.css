@@ -1,74 +1,103 @@
-.nav {
-    padding: 5px;
-    border: 1px solid black;
-    margin: 15px auto; 
-    max-width: 800px; 
-    width: 90%; 
-}
+    .nav {
+        padding: 5px;
+        border: 1px solid black;
+        margin: 15px auto; 
+        max-width: 800px; 
+        width: 90%; 
+    }
 
-.navContent {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-}
+    .navContent {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+    }
 
-.list {
-    display: flex;
-    justify-content: flex-start; 
-    list-style-type: none;
-    padding: 0;
-}
+    .list {
+        display: flex;
+        justify-content: flex-start; 
+        list-style-type: none;
+        padding: 0;
+    }
 
-.item {
-    margin: 0 10px;
-    font-size: 17px;
-    color: black; 
-    position: relative;
-}
+    .item {
+        margin: 0 10px;
+        font-size: 17px;
+        color: black; 
+        position: relative;
+    }
 
-.item a {
-    text-decoration: none;
-    color: inherit;
-    padding: 2px; 
-    overflow: hidden;
-}
+    .item a {
+        text-decoration: none;
+        color: inherit;
+        padding: 2px; 
+        overflow: hidden;
+    }
 
-.item a::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 0; 
-    background-color: lightgray ;
-    transition: height 0.3s ease; 
-    z-index: -1;
-}
+    .item a::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 0; 
+        background-color: lightgray ;
+        transition: height 0.3s ease; 
+        z-index: -1;
+    }
 
-.item a:hover::before {
-    height: 100%; 
-}
+    .item a:hover::before {
+        height: 100%; 
+    }
 
-.iconContainer {
-    display: flex;
-    align-items: center; 
-}
+    .iconContainer {
+        display: flex;
+        align-items: center; 
+    }
 
-.iconContainer a {
-    margin-left: 20px; 
-    font-size: 24px;
-    color: darkgrey; 
-}
+    .iconContainer a {
+        margin-left: 20px; 
+        font-size: 24px;
+        color: darkgrey; 
+    }
 
-.iconContainer a:first-child {
-    margin-left: 0; 
-}
+    .iconContainer a:first-child {
+        margin-left: 0; 
+    }
 
 
-.iconContainer a {
-    transition: transform 0.3s ease; 
-}
+    .iconContainer a {
+        transition: transform 0.3s ease; 
+    }
 
-.iconContainer a:hover {
-    transform: scale(1.2); 
-}
+    .iconContainer a:hover {
+        transform: scale(1.2); 
+    }
+
+
+    .tooltip {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .tooltipText {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%; /* Position above the icon */
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+    
+    .tooltip:hover .tooltipText {
+        visibility: visible;
+        opacity: 1;
+    }
+    

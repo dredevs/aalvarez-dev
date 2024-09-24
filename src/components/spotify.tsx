@@ -3,12 +3,14 @@ import styles from '../components/modules/spotify.module.css';
 
 const Spotify: React.FC = () => {
     const [track, setTrack] = useState<any>(null);
-    const [token] = useState('');
+    const [token, setToken] = useState<string>('');
     const [progress, setProgress] = useState<number>(0);
     const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
     useEffect(() => {
         const fetchCurrentlyPlaying = async () => {
+            if (!token) return;
+
             try {
                 const response = await fetch('https://api.spotify.com/v1/me/player/currently-playing', {
                     headers: {
@@ -50,12 +52,6 @@ const Spotify: React.FC = () => {
 
         return () => clearInterval(timer);
     }, [isPlaying, track]);
-
-    useEffect(() => {
-        if (track) {
-            setIsPlaying(track.is_playing);
-        }
-    }, [track]);
 
     const formatTime = (ms: number) => {
         const minutes = Math.floor(ms / 60000);

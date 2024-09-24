@@ -10,10 +10,16 @@ interface Repository {
 
 const Repositories: React.FC = () => {
     const [repos, setRepos] = useState<Repository[]>([]);
-    const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
+        const loadReposFromLocalStorage = () => {
+            const storedRepos = localStorage.getItem('repos');
+            if (storedRepos) {
+                setRepos(JSON.parse(storedRepos));
+            }
+        };
+
         const fetchRepositories = async () => {
             try {
                 const response = await fetch('https://api.github.com/users/dredevs/repos');
@@ -22,18 +28,24 @@ const Repositories: React.FC = () => {
                 }
                 const data = await response.json();
                 setRepos(data);
+                localStorage.setItem('repos', JSON.stringify(data)); 
             } catch (err) {
                 setError(err.message);
-            } finally {
-                setLoading(false);
             }
         };
 
-        fetchRepositories();
+        loadReposFromLocalStorage();
+        if (!localStorage.getItem('repos')) {
+            fetchRepositories();
+        }
     }, []);
 
-    if (loading) return <div></div>;
-    if (error) return <div>Error: {error}</div>;
+    if (error) return (
+        <div className={styles.error}>
+            <p>Error: {error}</p>
+            <button onClick={() => window.location.reload()} className={styles.retryButton}>Retry</button>
+        </div>
+    );
 
     return (
         <div className={styles.container}>
