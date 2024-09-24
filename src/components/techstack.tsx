@@ -24,7 +24,7 @@ const TechStack: React.FC = () => {
         <div className={styles.container}>
             <h1 className={styles.title}>Tech Stack</h1>
             <p className={styles.description}>
-            I use a variety of tools to streamline my development process and increase rate
+            I use a variety of tools to streamline my development process and increase the
             <br />
             quality of both my code, and my projects. Below is a list of tools and
             <br />
