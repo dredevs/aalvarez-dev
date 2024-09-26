@@ -1,6 +1,6 @@
 .container {
     padding: 20px;
-    text-align: left;
+    text-align: center; /* Center the content for better alignment on small screens */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,7 +12,7 @@
     align-items: center;
     width: 100%;
     max-width: 600px;
-    margin-bottom: -5px;
+    margin-bottom: 10px;
 }
 
 .projectsTitle {
@@ -35,6 +35,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%; /* Full width for the list */
 }
 
 .repoItem {
@@ -44,7 +45,7 @@
     margin: 10px 0;
     transition: background-color 0.3s;
     max-width: 600px;
-    width: 250%;
+    width: 100%; /* Full width on smaller screens */
 }
 
 .repoItem:hover {
@@ -96,3 +97,32 @@
     cursor: pointer;
 }
 
+
+@media (max-width: 768px) {
+    .projectsTitle {
+        font-size: 1.5rem; 
+    }
+
+    .repoItem {
+        width: 90%; 
+    }
+
+    .viewMore {
+        font-size: 0.9rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .projectsTitle {
+        font-size: 1.2rem; 
+    }
+
+    .repoItem {
+        padding: 15px;
+        font-size: 0.9rem; 
+    }
+
+    .viewMore {
+        font-size: 0.8rem; 
+    }
+}
