@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Head>
                 <meta charSet="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>DreDevs</title> {/* Optional: Set a default title */}
+                <title>DreDevs</title> 
             </Head>
             <Component {...pageProps} />
         </>
